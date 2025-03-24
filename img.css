@@ -1,0 +1,121 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  font-family: 'Ubuntu', sans-serif;
+  background: url('car1.jpg') no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.container {
+  max-height: 90vh;
+  overflow-y: auto;
+  background: rgba(0, 0, 0, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  max-width: 960px;
+  padding: 2rem;
+  border-radius: 16px;
+  color: white;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.2);
+  text-align: justify;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* Card layout */
+.icon-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.card {
+  flex: 1;
+  min-width: 250px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.4s ease;
+  animation: fadeInUp 1s ease forwards;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 12px rgba(24, 240, 255, 0.6);
+}
+
+/* Icon animation */
+.icon {
+  font-size: 2rem;
+  display: inline-block;
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.light-mode {
+  background-color: #dfd3d3;
+  color: rgb(20, 18, 18);
+}
+
+.dark-mode .card {
+  background: rgba(246, 245, 245, 0.08);
+  color: rgb(0, 0, 0);
+  box-shadow: 0 0 10px rgba(255, 251, 251, 0.2);
+}
+
+.toggle-mode {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background: #00bcd4;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 1000;
+}
+
+#topBtn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  background-color: #b31616;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 50px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  display: none;
+  z-index: 1000;
+}
